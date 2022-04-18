@@ -3,8 +3,10 @@ namespace Users.Core.Infrastracture;
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Users.Core.Domain.Repositories;
 using Users.Core.Infrastracture.Persistence.Configuration;
 using Users.Core.Infrastracture.Persistence.EF;
+using Users.Core.Infrastracture.Persistence.EF.Repositories;
 
 static class IServiceCollectionExtension
 {
@@ -22,6 +24,8 @@ static class IServiceCollectionExtension
                 ),
             ServiceLifetime.Scoped
         );
+
+        serviceCollection.AddScoped<IUsersRepository, UsersRepository>();
         
         ApplyMigrations(persistenceConfiguration.GetConnectionString());
 

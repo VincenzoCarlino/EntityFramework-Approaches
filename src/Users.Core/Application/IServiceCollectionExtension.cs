@@ -2,6 +2,7 @@ namespace Users.Core.Application;
 
 using System;
 using Microsoft.Extensions.DependencyInjection;
+using Users.Core.Application.Services;
 using Users.Core.Infrastracture;
 using Users.Core.Infrastracture.Persistence.Configuration;
 
@@ -14,6 +15,8 @@ public static class IServiceCollectionExtension
         serviceCollection.AddPersistence(
             persistenceConfigurationDelegateProvider
         );
+
+        serviceCollection.AddScoped<IUsersService, UsersService>();
 
         return serviceCollection;
     }
