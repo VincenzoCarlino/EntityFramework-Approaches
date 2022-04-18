@@ -1,6 +1,12 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Users.Core.Application;
+using Users.Core.Infrastracture.Persistence.Configuration;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplication(
+    _ => PersistenceConfiguration.FromEnvVars()
+);
+
+var app = builder.Build();
 
 app.Run();

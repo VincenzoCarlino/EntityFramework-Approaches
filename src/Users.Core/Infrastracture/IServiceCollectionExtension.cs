@@ -8,7 +8,7 @@ using Users.Core.Infrastracture.Persistence.EF;
 
 static class IServiceCollectionExtension
 {
-    static IServiceCollection AddPersistence(
+    internal static IServiceCollection AddPersistence(
         this IServiceCollection serviceCollection,
         Func<IServiceProvider, PersistenceConfiguration> persistenceConfigurationDelegateProvider)
     {
