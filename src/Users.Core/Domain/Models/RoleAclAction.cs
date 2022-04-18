@@ -12,11 +12,9 @@ public class RoleAclAction
 
     #endregion
 
-    public RoleAclAction(string roleId, string aclActionId, AclAction? aclAction, Role? role)
+    public RoleAclAction(string roleId, string aclActionId)
     {
         RoleId = roleId;
         AclActionId = aclActionId;
-        AclAction = aclAction;
-        Role = role;
     }
 }
