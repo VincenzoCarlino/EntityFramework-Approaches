@@ -10,7 +10,7 @@ internal class AclAction
 
     #region EF Navigation Properties
 
-    public ICollection<RoleAclAction> AclActionRoles { get; private set; }
+    public ICollection<RoleAclAction>? AclActionRoles { get; private set; }
 
     #endregion
 

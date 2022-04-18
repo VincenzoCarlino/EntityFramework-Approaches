@@ -2,6 +2,7 @@ namespace Users.Core.Domain.Models;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 internal class User
 {
@@ -12,7 +13,7 @@ internal class User
 
     #region MyRegion
 
-    public ICollection<UserRole> UserRoles { get; private set; }
+    internal ICollection<UserRole>? UserRoles { get; private set; }
 
     #endregion
 
@@ -23,4 +24,13 @@ internal class User
         LastName = lastName;
         Username = username;
     }
+
+    public IEnumerable<Role> GetRoles()
+        => UserRoles?.Select(x => x.Role)
+               .Where(x => x != null) as IEnumerable<Role>
+           ?? throw new Exception($"Roles not included in user {Id}");
+
+    public IEnumerable<AclAction> GetAclActions()
+        => GetRoles()
+            .SelectMany(x => x.RoleAclActions?.Select(x => x.AclAction) ?? throw new Exception("Missing acl actions"));
 }
