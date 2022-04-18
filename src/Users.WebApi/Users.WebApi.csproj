@@ -10,4 +10,11 @@
       <ProjectReference Include="..\Users.Core\Users.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Versioning" Version="2.0.0" />
+    </ItemGroup>
+
 </Project>
