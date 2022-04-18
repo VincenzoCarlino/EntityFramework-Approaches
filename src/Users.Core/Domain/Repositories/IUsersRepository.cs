@@ -7,4 +7,5 @@ using Users.Core.Domain.Models;
 internal interface IUsersRepository
 {
     Task<IEnumerable<User>> GetUsersAsync();
+    Task<IEnumerable<User>> GetUsersWithRoles();
 }
