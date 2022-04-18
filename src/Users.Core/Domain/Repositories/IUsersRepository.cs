@@ -8,4 +8,5 @@ internal interface IUsersRepository
 {
     Task<IEnumerable<User>> GetUsersAsync();
     Task<IEnumerable<User>> GetUsersWithRoles();
+    Task<IEnumerable<User>> GetUserWithRolesAndAclActions();
 }

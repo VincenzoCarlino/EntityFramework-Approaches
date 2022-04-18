@@ -8,12 +8,14 @@ public class UserSimpleOutput
     public Guid Id { get; }
     public string DisplayName { get; }
 
-    private UserSimpleOutput(Guid id, string displayName)
+    protected UserSimpleOutput(Guid id, string displayName)
     {
         Id = id;
         DisplayName = displayName;
     }
-
     internal static UserSimpleOutput Create(User user)
-        => new(user.Id, $"{user.FirstName} {user.LastName}");
+        => new(user.Id, GenerateUserDisplayName(user));
+
+    internal static string GenerateUserDisplayName(User user)
+        => $"{user.FirstName} {user.LastName}";
 }

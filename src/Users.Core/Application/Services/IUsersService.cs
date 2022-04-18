@@ -7,4 +7,6 @@ using Users.Core.Application.DTO.Users;
 public interface IUsersService
 {
     Task<IEnumerable<UserSimpleOutput>> GetUsersSimpleOutputAsync();
+    Task<IEnumerable<UserWithRolesOutput>> GetUsersWithRolesOutputAsync();
+    Task<IEnumerable<UserWithAclActionsOutput>> GetUserWithAclActionsOutput();
 }

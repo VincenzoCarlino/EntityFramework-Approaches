@@ -26,4 +26,15 @@ public class UsersController : Controller
                     StatusCode = 200
                 }
             );
+
+    [HttpGet("list-view")]
+    [Produces("application/json")]
+    public Task<ActionResult<IEnumerable<UserWithRolesOutput>>> GetUsersWithRolesOutputAsync()
+        => _usersService.GetUsersWithRolesOutputAsync()
+            .ContinueWith<ActionResult<IEnumerable<UserWithRolesOutput>>>(
+                usersWithRolesOutputTaskResult => new JsonResult(usersWithRolesOutputTaskResult.Result)
+                {
+                    StatusCode = 200
+                }
+            );
 }

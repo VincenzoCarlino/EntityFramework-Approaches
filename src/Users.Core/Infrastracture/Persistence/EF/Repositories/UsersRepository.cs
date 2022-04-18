@@ -32,4 +32,17 @@ class UsersRepository : IUsersRepository
 
         return users;
     }
+
+    public async Task<IEnumerable<User>> GetUserWithRolesAndAclActions()
+    {
+        
+        var users = await _applicationDbContext.Users
+            .Include(x => x.UserRoles)
+            .ThenInclude(x => x.Role!)
+            .ThenInclude(x => x.RoleAclActions!)
+            .ThenInclude(x => x.AclAction)
+            .ToListAsync();
+
+        return users;
+    }
 }

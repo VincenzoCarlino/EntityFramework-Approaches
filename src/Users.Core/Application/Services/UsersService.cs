@@ -21,4 +21,18 @@ class UsersService : IUsersService
                 usersTaskResult => usersTaskResult.Result
                     .Select(UserSimpleOutput.Create)
             );
+
+    public Task<IEnumerable<UserWithRolesOutput>> GetUsersWithRolesOutputAsync()
+        => _usersRepository.GetUsersWithRoles()
+            .ContinueWith(
+                usersTaskResult => usersTaskResult.Result
+                    .Select(UserWithRolesOutput.Create)
+            );
+
+    public Task<IEnumerable<UserWithAclActionsOutput>> GetUserWithAclActionsOutput()
+        => _usersRepository.GetUserWithRolesAndAclActions()
+            .ContinueWith(
+                usersTaskResult => usersTaskResult.Result
+                    .Select(UserWithAclActionsOutput.Create)
+            );
 }
