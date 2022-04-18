@@ -3,7 +3,7 @@ namespace Users.Core.Domain.Models;
 using System;
 using System.Collections.Generic;
 
-public class User
+internal class User
 {
     public Guid Id { get; }
     public string FirstName { get; }

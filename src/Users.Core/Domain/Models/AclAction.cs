@@ -2,7 +2,7 @@ namespace Users.Core.Domain.Models;
 
 using System.Collections.Generic;
 
-public class AclAction
+internal class AclAction
 {
     public string Id { get; }
     public string DisplayName { get; }

@@ -1,6 +1,6 @@
 namespace Users.Core.Domain.Models;
 
-public class RoleAclAction
+internal class RoleAclAction
 {
     public string RoleId { get; }
     public string AclActionId { get; }

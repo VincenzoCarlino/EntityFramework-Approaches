@@ -2,7 +2,7 @@ namespace Users.Core.Domain.Models;
 
 using System;
 
-public class UserRole
+internal class UserRole
 {
     public Guid UserId { get; }
     public string RoleId { get; }
