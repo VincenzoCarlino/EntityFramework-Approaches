@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Domain.Models.Roles;
+namespace UsersSample.Domain.Models.Roles;
 
 public class RoleSimple
 {

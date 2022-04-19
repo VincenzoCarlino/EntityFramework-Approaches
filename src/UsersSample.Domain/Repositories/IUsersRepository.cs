@@ -1,8 +1,8 @@
-namespace UsersSample.Core.Domain.Repositories;
+namespace UsersSample.Domain.Repositories;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UsersSample.Core.Domain.Models.Users;
+using UsersSample.Domain.Models.Users;
 
 public interface IUsersRepository
 {

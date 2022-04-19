@@ -1,6 +1,7 @@
-namespace UsersSample.Core.Domain.Models.Roles;
+namespace UsersSample.Domain.Models.Roles;
 
 using System.Collections.Generic;
+using UsersSample.Domain.Models.AclActions;
 
 public class RoleWithAclActions : RoleSimple
 {

@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Domain.Models;
+namespace UsersSample.Domain.Models.AclActions;
 
 public class AclActionSimple
 {

@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Domain.Models.Users;
+namespace UsersSample.Domain.Models.Users;
 
 using System;
 

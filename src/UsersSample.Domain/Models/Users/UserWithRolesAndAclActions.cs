@@ -1,9 +1,10 @@
-namespace UsersSample.Core.Domain.Models.Users;
+namespace UsersSample.Domain.Models.Users;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UsersSample.Core.Domain.Models.Roles;
+using UsersSample.Domain.Models.AclActions;
+using UsersSample.Domain.Models.Roles;
 
 public class UserWithRolesAndAclActions : UserSimple
 {
