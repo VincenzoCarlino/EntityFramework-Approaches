@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\UsersSample.Application\UsersSample.Application.csproj" />
+      <ProjectReference Include="..\UsersSample.Core\UsersSample.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Versioning" Version="2.0.0" />
+    </ItemGroup>
+
+</Project>
