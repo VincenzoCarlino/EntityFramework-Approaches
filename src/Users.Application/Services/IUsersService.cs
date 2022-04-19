@@ -1,8 +1,8 @@
-namespace Users.Core.Application.Services;
+namespace Users.Application.Services;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Users.Core.Application.DTO.Users;
+using Users.Application.DTO.Users;
 
 public interface IUsersService
 {

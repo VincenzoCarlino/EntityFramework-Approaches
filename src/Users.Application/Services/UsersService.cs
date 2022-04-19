@@ -1,9 +1,9 @@
-namespace Users.Core.Application.Services;
+namespace Users.Application.Services;
 
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Users.Core.Application.DTO.Users;
+using Users.Application.DTO.Users;
 using Users.Core.Domain.Repositories;
 
 class UsersService : IUsersService

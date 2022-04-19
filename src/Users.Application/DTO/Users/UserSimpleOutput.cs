@@ -1,7 +1,7 @@
-namespace Users.Core.Application.DTO.Users;
+namespace Users.Application.DTO.Users;
 
 using System;
-using global::Users.Core.Domain.Models;
+using global::Users.Core.Domain.Models.Users;
 
 public class UserSimpleOutput
 {
@@ -13,9 +13,9 @@ public class UserSimpleOutput
         Id = id;
         DisplayName = displayName;
     }
-    internal static UserSimpleOutput Create(User user)
+    internal static UserSimpleOutput Create(UserSimple user)
         => new(user.Id, GenerateUserDisplayName(user));
 
-    internal static string GenerateUserDisplayName(User user)
+    internal static string GenerateUserDisplayName(UserSimple user)
         => $"{user.FirstName} {user.LastName}";
 }

@@ -1,8 +1,8 @@
-namespace Users.Core.Application;
+namespace Users.Application;
 
 using System;
 using Microsoft.Extensions.DependencyInjection;
-using Users.Core.Application.Services;
+using Users.Application.Services;
 using Users.Core.Infrastracture;
 using Users.Core.Infrastracture.Persistence.Configuration;
 

@@ -1,9 +1,10 @@
-namespace Users.Core.Application.DTO.Users;
+namespace Users.Application.DTO.Users;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using global::Users.Core.Domain.Models;
+using global::Users.Core.Domain.Models.Users;
 
 public class UserWithRolesOutput : UserSimpleOutput
 {
@@ -14,10 +15,10 @@ public class UserWithRolesOutput : UserSimpleOutput
         Roles = roles;
     }
 
-    internal static UserWithRolesOutput Create(User user)
+    internal static UserWithRolesOutput Create(UserWithRoles user)
         => new(
             user.Id,
             GenerateUserDisplayName(user),
-            user.GetRoles().Select(x => x.DisplayName)
+            user.Roles.Select(x => x.DisplayName)
         );
 }
