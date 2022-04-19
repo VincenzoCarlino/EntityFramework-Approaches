@@ -1,6 +1,7 @@
-namespace UsersSample.Core.Infrastracture.Persistence.Entities;
+namespace UsersSample.Persistence.Entities;
 
 using System.Collections.Generic;
+
 class DbRole
 {
     public string Id { get; }

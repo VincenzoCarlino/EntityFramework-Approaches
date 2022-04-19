@@ -1,13 +1,13 @@
-namespace UsersSample.Core.Infrastracture.Persistence.EF.Repositories;
+namespace UsersSample.Persistence.EF.Repositories;
 
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using UsersSample.Core.Domain.Models;
-using UsersSample.Core.Domain.Models.Roles;
-using UsersSample.Core.Domain.Models.Users;
-using UsersSample.Core.Domain.Repositories;
+using UsersSample.Domain.Models.AclActions;
+using UsersSample.Domain.Models.Roles;
+using UsersSample.Domain.Models.Users;
+using UsersSample.Domain.Repositories;
 
 class UsersRepository : IUsersRepository
 {

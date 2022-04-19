@@ -2,9 +2,9 @@ namespace UsersSample.Application;
 
 using System;
 using Microsoft.Extensions.DependencyInjection;
-using UsersSample.Core.Infrastracture;
 using UsersSample.Application.Services;
-using UsersSample.Core.Infrastracture.Persistence.Configuration;
+using UsersSample.Persistence;
+using UsersSample.Persistence.Configuration;
 
 public static class IServiceCollectionExtension
 {

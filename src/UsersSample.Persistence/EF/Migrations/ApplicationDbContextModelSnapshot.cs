@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using UsersSample.Core.Infrastracture.Persistence.EF;
+using UsersSample.Persistence.EF;
 
 #nullable disable
 
-namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
+namespace UsersSample.Persistence.EF.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -23,7 +23,7 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "uuid-ossp");
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.AclAction", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbAclAction", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text")
@@ -44,7 +44,7 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.ToTable("acl_actions", (string)null);
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.Role", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbRole", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text")
@@ -65,7 +65,7 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.ToTable("roles", (string)null);
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.RoleAclAction", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbRoleAclAction", b =>
                 {
                     b.Property<string>("RoleId")
                         .HasColumnType("text")
@@ -82,7 +82,7 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.ToTable("role_aclaction", (string)null);
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.User", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbUser", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -112,7 +112,7 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.ToTable("users", (string)null);
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.UserRole", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbUserRole", b =>
                 {
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid")
@@ -129,15 +129,15 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.ToTable("user_role", (string)null);
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.RoleAclAction", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbRoleAclAction", b =>
                 {
-                    b.HasOne("UsersSample.Core.Domain.Models.AclAction", "AclAction")
+                    b.HasOne("UsersSample.Persistence.Entities.DbAclAction", "AclAction")
                         .WithMany("AclActionRoles")
                         .HasForeignKey("AclActionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UsersSample.Core.Domain.Models.Role", "Role")
+                    b.HasOne("UsersSample.Persistence.Entities.DbRole", "Role")
                         .WithMany("RoleAclActions")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -148,15 +148,15 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.UserRole", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbUserRole", b =>
                 {
-                    b.HasOne("UsersSample.Core.Domain.Models.Role", "Role")
+                    b.HasOne("UsersSample.Persistence.Entities.DbRole", "Role")
                         .WithMany("RoleUsers")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UsersSample.Core.Domain.Models.User", "User")
+                    b.HasOne("UsersSample.Persistence.Entities.DbUser", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -167,19 +167,19 @@ namespace UsersSample.Core.Infrastracture.Persistence.EF.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.AclAction", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbAclAction", b =>
                 {
                     b.Navigation("AclActionRoles");
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.Role", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbRole", b =>
                 {
                     b.Navigation("RoleAclActions");
 
                     b.Navigation("RoleUsers");
                 });
 
-            modelBuilder.Entity("UsersSample.Core.Domain.Models.User", b =>
+            modelBuilder.Entity("UsersSample.Persistence.Entities.DbUser", b =>
                 {
                     b.Navigation("UserRoles");
                 });

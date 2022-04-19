@@ -1,6 +1,6 @@
 using Microsoft.OpenApi.Models;
 using UsersSample.Application;
-using UsersSample.Core.Infrastracture.Persistence.Configuration;
+using UsersSample.Persistence.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

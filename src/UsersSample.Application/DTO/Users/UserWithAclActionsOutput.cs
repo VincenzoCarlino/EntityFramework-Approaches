@@ -3,7 +3,7 @@ namespace UsersSample.Application.DTO.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UsersSample.Core.Domain.Models.Users;
+using UsersSample.Domain.Models.Users;
 
 public class UserWithAclActionsOutput : UserSimpleOutput
 {

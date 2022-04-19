@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Infrastracture.Persistence.Configuration;
+namespace UsersSample.Persistence.Configuration;
 
 using System;
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UsersSample.Application.DTO.Users;
-using UsersSample.Core.Domain.Repositories;
+using UsersSample.Domain.Repositories;
 
 class UsersService : IUsersService
 {

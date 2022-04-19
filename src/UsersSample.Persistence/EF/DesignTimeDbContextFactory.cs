@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Infrastracture.Persistence.EF;
+namespace UsersSample.Persistence.EF;
 
 using System;
 using Microsoft.EntityFrameworkCore;

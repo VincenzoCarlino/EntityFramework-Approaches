@@ -10,7 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UsersSample.Core\UsersSample.Core.csproj" />
+      <ProjectReference Include="..\UsersSample.Domain\UsersSample.Domain.csproj" />
+      <ProjectReference Include="..\UsersSample.Persistence\UsersSample.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

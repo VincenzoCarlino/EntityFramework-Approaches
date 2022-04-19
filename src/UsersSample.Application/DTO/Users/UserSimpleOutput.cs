@@ -1,7 +1,7 @@
 namespace UsersSample.Application.DTO.Users;
 
 using System;
-using UsersSample.Core.Domain.Models.Users;
+using UsersSample.Domain.Models.Users;
 
 public class UserSimpleOutput
 {

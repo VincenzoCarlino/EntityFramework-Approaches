@@ -1,8 +1,8 @@
-namespace UsersSample.Core.Infrastracture.Persistence.EF;
+namespace UsersSample.Persistence.EF;
 
 using Microsoft.EntityFrameworkCore;
-using UsersSample.Core.Infrastracture.Persistence.EF.EntityConfigurations;
-using UsersSample.Core.Infrastracture.Persistence.Entities;
+using UsersSample.Persistence.EF.EntityConfigurations;
+using UsersSample.Persistence.Entities;
 
 class ApplicationDbContext : DbContext
 {

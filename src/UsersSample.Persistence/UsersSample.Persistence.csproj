@@ -2,11 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <WarningsAsErrors>CS8600;CS8602;CS8603;CS8629</WarningsAsErrors>
-        <NoWarn>CS1591</NoWarn>
-        <RootNamespace>Users.Core</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,7 +15,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Infrastracture\Persistence\EF\Migrations" />
+      <ProjectReference Include="..\UsersSample.Domain\UsersSample.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="EF\Migrations" />
     </ItemGroup>
 
 </Project>

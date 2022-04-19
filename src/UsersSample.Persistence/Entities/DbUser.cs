@@ -1,4 +1,4 @@
-namespace UsersSample.Core.Infrastracture.Persistence.Entities;
+namespace UsersSample.Persistence.Entities;
 
 using System;
 using System.Collections.Generic;

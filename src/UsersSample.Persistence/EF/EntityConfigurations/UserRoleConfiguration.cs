@@ -1,8 +1,8 @@
-namespace UsersSample.Core.Infrastracture.Persistence.EF.EntityConfigurations;
+namespace UsersSample.Persistence.EF.EntityConfigurations;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using UsersSample.Core.Infrastracture.Persistence.Entities;
+using UsersSample.Persistence.Entities;
 
 class UserRoleConfiguration : IEntityTypeConfiguration<DbUserRole>
 {

@@ -1,12 +1,12 @@
-namespace UsersSample.Core.Infrastracture;
+namespace UsersSample.Persistence;
 
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using UsersSample.Core.Domain.Repositories;
-using UsersSample.Core.Infrastracture.Persistence.Configuration;
-using UsersSample.Core.Infrastracture.Persistence.EF;
-using UsersSample.Core.Infrastracture.Persistence.EF.Repositories;
+using UsersSample.Domain.Repositories;
+using UsersSample.Persistence.Configuration;
+using UsersSample.Persistence.EF;
+using UsersSample.Persistence.EF.Repositories;
 
 public static class IServiceCollectionExtension
 {
