@@ -3,10 +3,11 @@ namespace Users.Core.Infrastracture.Persistence.EF.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Users.Core.Domain.Models;
+using Users.Core.Infrastracture.Persistence.Entities;
 
-class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
+class UserRoleConfiguration : IEntityTypeConfiguration<DbUserRole>
 {
-    public void Configure(EntityTypeBuilder<UserRole> builder)
+    public void Configure(EntityTypeBuilder<DbUserRole> builder)
     {
         builder.ToTable("user_role");
 

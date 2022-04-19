@@ -3,10 +3,11 @@ namespace Users.Core.Infrastracture.Persistence.EF.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Users.Core.Domain.Models;
+using Users.Core.Infrastracture.Persistence.Entities;
 
-class UserConfiguration : IEntityTypeConfiguration<User>
+class UserConfiguration : IEntityTypeConfiguration<DbUser>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<DbUser> builder)
     {
         builder.ToTable("users");
 

@@ -8,9 +8,9 @@ using Users.Core.Infrastracture.Persistence.Configuration;
 using Users.Core.Infrastracture.Persistence.EF;
 using Users.Core.Infrastracture.Persistence.EF.Repositories;
 
-static class IServiceCollectionExtension
+public static class IServiceCollectionExtension
 {
-    internal static IServiceCollection AddPersistence(
+    public static IServiceCollection AddPersistence(
         this IServiceCollection serviceCollection,
         Func<IServiceProvider, PersistenceConfiguration> persistenceConfigurationDelegateProvider)
     {

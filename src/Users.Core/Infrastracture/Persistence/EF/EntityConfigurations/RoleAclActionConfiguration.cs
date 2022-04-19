@@ -3,10 +3,11 @@ namespace Users.Core.Infrastracture.Persistence.EF.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Users.Core.Domain.Models;
+using Users.Core.Infrastracture.Persistence.Entities;
 
-class RoleAclActionConfiguration : IEntityTypeConfiguration<RoleAclAction>
+class RoleAclActionConfiguration : IEntityTypeConfiguration<DbRoleAclAction>
 {
-    public void Configure(EntityTypeBuilder<RoleAclAction> builder)
+    public void Configure(EntityTypeBuilder<DbRoleAclAction> builder)
     {
         builder.ToTable("role_aclaction");
 
