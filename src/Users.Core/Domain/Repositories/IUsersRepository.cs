@@ -2,11 +2,11 @@ namespace Users.Core.Domain.Repositories;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Users.Core.Domain.Models;
+using Users.Core.Domain.Models.Users;
 
-internal interface IUsersRepository
+public interface IUsersRepository
 {
-    Task<IEnumerable<User>> GetUsersAsync();
-    Task<IEnumerable<User>> GetUsersWithRoles();
-    Task<IEnumerable<User>> GetUserWithRolesAndAclActions();
+    Task<IEnumerable<UserSimple>> GetUsersAsync();
+    Task<IEnumerable<UserWithRoles>> GetUsersWithRoles();
+    Task<IEnumerable<UserWithRolesAndAclActions>> GetUserWithRolesAndAclActions();
 }
