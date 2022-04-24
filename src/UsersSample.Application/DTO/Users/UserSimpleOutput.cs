@@ -13,9 +13,9 @@ public class UserSimpleOutput
         Id = id;
         DisplayName = displayName;
     }
-    internal static UserSimpleOutput Create(UserSimple user)
+    internal static UserSimpleOutput Create(IUser user)
         => new(user.Id, GenerateUserDisplayName(user));
 
-    internal static string GenerateUserDisplayName(UserSimple user)
+    internal static string GenerateUserDisplayName(IUser user)
         => $"{user.FirstName} {user.LastName}";
 }

@@ -3,9 +3,11 @@ namespace UsersSample.Persistence;
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using UsersSample.Domain.Providers;
 using UsersSample.Domain.Repositories;
 using UsersSample.Persistence.Configuration;
 using UsersSample.Persistence.EF;
+using UsersSample.Persistence.EF.Providers;
 using UsersSample.Persistence.EF.Repositories;
 
 public static class IServiceCollectionExtension
@@ -26,6 +28,8 @@ public static class IServiceCollectionExtension
         );
 
         serviceCollection.AddScoped<IUsersRepository, UsersRepository>();
+        serviceCollection.AddScoped<IUserProvider, UserProvider>();
+        serviceCollection.AddScoped<IUsersProvider, UsersProvider>();
         
         ApplyMigrations(persistenceConfiguration.GetConnectionString());
 

@@ -2,7 +2,6 @@ namespace UsersSample.Application.DTO.Users;
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UsersSample.Domain.Models.Users;
 
 public class UserWithAclActionsOutput : UserSimpleOutput
@@ -15,9 +14,10 @@ public class UserWithAclActionsOutput : UserSimpleOutput
     }
 
     internal static UserWithAclActionsOutput Create(UserWithRolesAndAclActions user)
-        => new(
-            user.Id,
-            GenerateUserDisplayName(user),
-            user.GetAllAclActions().Select(x => x.DisplayName)
-        );
+        => throw new NotImplementedException();
+    // => new(
+    //     user.Id,
+    //     GenerateUserDisplayName(user),
+    //     user.GetAllAclActions().Select(x => x.DisplayName)
+    // );
 }

@@ -3,6 +3,7 @@ namespace UsersSample.Application.DTO.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UsersSample.Domain.Models.Users;
 
 public class UserWithRolesOutput : UserSimpleOutput
@@ -14,10 +15,10 @@ public class UserWithRolesOutput : UserSimpleOutput
         Roles = roles;
     }
 
-    internal static UserWithRolesOutput Create(UserWithRoles user)
+    internal static async Task<UserWithRolesOutput> Create(IUser user)
         => new(
             user.Id,
             GenerateUserDisplayName(user),
-            user.Roles.Select(x => x.DisplayName)
+            await user.GetRoles().ContinueWith(roles => roles.Result.Select(x => x.DisplayName)).ConfigureAwait(false)
         );
 }
